@@ -2,10 +2,20 @@
 <html lang="fr">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Ohmyfood est un site qui répertorie les menus de restaurants gastronomiques.">
     <title>Oh my food !</title>
+
+    <!-- Google fonts and fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -13,110 +23,113 @@
         <h1>ohmyfood</h1>
     </header>
 
-    <div class="place">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Paris, Belleville</span>
-    </div>
+    <main>
 
-    <section class="reservation">
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button>
-            <span>Explorer nos restaurants</span>
-        </button>
-    </section>
-
-    <section class="functionnement">
-        <button>
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <span>Choisissez un restaurant</span>
-        </button>
-        <button>
-            <i class="fa-solid fa-list-ul"></i>
-            <span>Composez votre menu</span>
-        </button>
-        <button>
-            <i class="fa-solid fa-store"></i>
-            <span>Dégustez au restaurant</span>
-        </button>
-    </section>
-
-    <section class="cardsSection">
-        <h2>Restaurants</h2>
-
-        <div class="cards">
-            <picture>
-                <div class="newCards">
-                    <p>Nouveau</p>
-                </div>
-                <img src="" alt="">
-            </picture>
-            <div class="cardContent">
-                <div class="TextCard">
-                    <h3>La palette du goût</h3>
-                    <span>Ménilmontant</span>
-                </div>
-                <div class="iconeHeart">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
+        <div class="place">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Paris, Belleville</span>
         </div>
 
-        <div class="cards">
-            <picture>
-                <div class="newCards">
-                    <p>Nouveau</p>
-                </div>
-                <img src="" alt="">
-            </picture>
-            <div class="cardContent">
-                <div class="TextCard">
-                    <h3>La note enchantée</h3>
-                    <span>Charonne</span>
-                </div>
-                <div class="iconeHeart">
-                    <i class="fa-regular fa-heart"></i>
+        <section class="reservation">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button>
+                <span>Explorer nos restaurants</span>
+            </button>
+        </section>
+
+        <section class="functionnement">
+            <button>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>Choisissez un restaurant</span>
+            </button>
+            <button>
+                <i class="fa-solid fa-list-ul"></i>
+                <span>Composez votre menu</span>
+            </button>
+            <button>
+                <i class="fa-solid fa-store"></i>
+                <span>Dégustez au restaurant</span>
+            </button>
+        </section>
+
+        <section class="cardsSection">
+            <h2>Restaurants</h2>
+
+            <div class="cards">
+                <picture>
+                    <div class="newCards">
+                        <span>Nouveau</span>
+                    </div>
+                    <img src="assets/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">
+                </picture>
+                <div class="cardContent">
+                    <div class="TextCard">
+                        <h3>La palette du goût</h3>
+                        <span>Ménilmontant</span>
+                    </div>
+                    <div class="iconeHeart">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="cards">
-            <picture>
-                <div class="newCards">
-                    <p>Nouveau</p>
-                </div>
-                <img src="" alt="">
-            </picture>
-            <div class="cardContent">
-                <div class="TextCard">
-                    <h3>À la française</h3>
-                    <span>Cité Rouge</span>
-                </div>
-                <div class="iconeHeart">
-                    <i class="fa-regular fa-heart"></i>
+            <div class="cards">
+                <picture>
+                    <div class="newCards">
+                        <span>Nouveau</span>
+                    </div>
+                    <img src="/assets/restaurants/la_note_enchantee.jpg" alt="La note enchantée">
+                </picture>
+                <div class="cardContent">
+                    <div class="TextCard">
+                        <h3>La note enchantée</h3>
+                        <span>Charonne</span>
+                    </div>
+                    <div class="iconeHeart">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="cards">
-            <picture>
-                <div class="newCards">
-                    <p>Nouveau</p>
-                </div>
-                <img src="" alt="">
-            </picture>
-            <div class="cardContent">
-                <div class="TextCard">
-                    <h3>Le délice des sens</h3>
-                    <span>Folie-Méricourt</span>
-                </div>
-                <div class="iconeHeart">
-                    <i class="fa-regular fa-heart"></i>
+            <div class="cards">
+                <picture>
+                    <div class="newCards">
+                        <span>Nouveau</span>
+                    </div>
+                    <img src="assets/restaurants/a_la_francaise.jpg" alt="À la française">
+                </picture>
+                <div class="cardContent">
+                    <div class="TextCard">
+                        <h3>À la française</h3>
+                        <span>Cité Rouge</span>
+                    </div>
+                    <div class="iconeHeart">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </section>
+            <div class="cards">
+                <picture>
+                    <div class="newCards">
+                        <span>Nouveau</span>
+                    </div>
+                    <img src="assets/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">
+                </picture>
+                <div class="cardContent">
+                    <div class="TextCard">
+                        <h3>Le délice des sens</h3>
+                        <span>Folie-Méricourt</span>
+                    </div>
+                    <div class="iconeHeart">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <h2>ohmyfood</h2>
@@ -127,7 +140,7 @@
             <span>Contact</span>
         </div>
     </footer>
-    
+
 </body>
 
 </html>
