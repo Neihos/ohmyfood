@@ -1,1 +1,235 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --font-principal: "Roboto", Arial, Helvetica, sans-serif;
+  --background-secondaire: #eaeaea;
+  --button-color: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+body {
+  font-family: var(--font-principal);
+}
+
+.siteHeader {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteHeader_logo {
+  width: 162px;
+  height: 30px;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 15px;
+  background-color: var(--background-secondaire);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.place i,
+.place span {
+  color: rgb(53, 53, 53);
+}
+.place i {
+  font-size: 16px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 40px;
+}
+.reservation h2 {
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 0px;
+  margin: 0px 20px;
+}
+.reservation p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+.reservation_button {
+  width: 218px;
+  height: 50px;
+  margin: 20px auto;
+  padding: 0;
+  background: var(--button-color);
+  border-radius: 25px;
+  border: none;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.functionnement {
+  padding-top: 40px;
+}
+.functionnement h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.functionnement_container {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  gap: 20px;
+}
+.functionnement_container_button {
+  width: 323px;
+  height: 73px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  gap: 18px;
+}
+.functionnement_container_button_number {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  top: 25px;
+  left: -12px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 12px;
+  background-color: rgb(147, 86, 220);
+}
+.functionnement_container_button .fa-store {
+  color: rgb(147, 86, 220);
+}
+.functionnement_container_button .fa-mobile-screen-button,
+.functionnement_container_button .fa-list-ul {
+  color: rgb(126, 126, 126);
+}
+
+.cardsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondaire);
+}
+.cardsSection h2 {
+  margin-left: 20px;
+  padding-top: 40px;
+}
+.cardsSection .cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+  gap: 20px;
+}
+.cardsSection .cardsContainer .cards {
+  width: 340px;
+  height: 251px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 15px;
+}
+.cardsSection .cardsContainer .cards_img {
+  width: 100%;
+  max-height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.cardsSection .cardsContainer .cards_new {
+  width: 80px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgb(153, 226, 208);
+  border-radius: 2px;
+}
+.cardsSection .cardsContainer .cards_new span {
+  color: rgb(0, 135, 102);
+}
+.cardsSection .cardsContainer .cards_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+.cardsSection .cardsContainer .cards_content .textCard {
+  display: flex;
+  flex-direction: column;
+}
+.cardsSection .cardsContainer .cards_content .textCard h3 {
+  font-size: 18px;
+  margin: 0px;
+  padding-bottom: 5px;
+}
+.cardsSection .cardsContainer .cards_content .textCard span {
+  font-size: 17px;
+  font-weight: 300;
+}
+.cardsSection .cardsContainer .cards_content .iconeHeart {
+  background-color: transparent;
+  border: none;
+}
+.cardsSection .cardsContainer .cards_content .iconeHeart .fa-heart {
+  font-size: 22px;
+}
+
+.siteFooter {
+  background-color: rgb(53, 53, 53);
+  padding: 30px;
+}
+.siteFooter h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
+.siteFooter_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+.siteFooter_container_span {
+  display: flex;
+  gap: 10px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: white;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

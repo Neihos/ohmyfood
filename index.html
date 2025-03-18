@@ -13,17 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
         rel="stylesheet">
     
-    <!-- CSS -->
+    <!-- CSS et Normalize.css ( Améliore la compatibilité entre navigateurs )-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
-    <header>
-        <h1>ohmyfood</h1>
+    <header class="siteHeader">
+        <img class="siteHeader_logo" src="assets/logo/logo.png" alt="logo du site">
     </header>
 
-    <main>
+    <main class="main-container">
 
         <div class="place">
             <i class="fa-solid fa-location-dot"></i>
@@ -33,111 +34,104 @@
         <section class="reservation">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>
-                <span>Explorer nos restaurants</span>
-            </button>
+            <button class="reservation_button" type="button">Explorer nos restaurants</button>
         </section>
 
         <section class="functionnement">
-            <button>
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <span>Choisissez un restaurant</span>
-            </button>
-            <button>
-                <i class="fa-solid fa-list-ul"></i>
-                <span>Composez votre menu</span>
-            </button>
-            <button>
-                <i class="fa-solid fa-store"></i>
-                <span>Dégustez au restaurant</span>
-            </button>
+            <h2>Fonctionnement</h2>
+            <div class="functionnement_container">
+                <button class="functionnement_container_button">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Choisissez un restaurant</span>
+                    <div class="functionnement_container_button_number">1</div>
+                </button>
+                <button class="functionnement_container_button">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <span>Composez votre menu</span>
+                    <div class="functionnement_container_button_number">2</div>
+                </button>
+                <button class="functionnement_container_button">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Dégustez au restaurant</span>
+                    <div class="functionnement_container_button_number">3</div>
+                </button>
+            </div>
         </section>
 
         <section class="cardsSection">
             <h2>Restaurants</h2>
 
-            <div class="cards">
-                <picture>
-                    <div class="newCards">
-                        <span>Nouveau</span>
-                    </div>
-                    <img src="assets/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">
-                </picture>
-                <div class="cardContent">
-                    <div class="TextCard">
-                        <h3>La palette du goût</h3>
-                        <span>Ménilmontant</span>
-                    </div>
-                    <div class="iconeHeart">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
+            <div class="cardsContainer">
 
-            <div class="cards">
-                <picture>
-                    <div class="newCards">
+                <article class="cards">                
+                    <div class="cards_new">
                         <span>Nouveau</span>
+                    </div>                
+                    <img class="cards_img" src="assets/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">                
+                    <div class="cards_content">
+                        <div class="textCard">
+                            <h3>La palette du goût</h3>
+                            <span>Ménilmontant</span>
+                        </div>
+                        <button class="iconeHeart">
+                            <img src="assets/like/noLike.png" alt="icone coeur vide">
+                        </button>
                     </div>
-                    <img src="/assets/restaurants/la_note_enchantee.jpg" alt="La note enchantée">
-                </picture>
-                <div class="cardContent">
-                    <div class="TextCard">
-                        <h3>La note enchantée</h3>
-                        <span>Charonne</span>
-                    </div>
-                    <div class="iconeHeart">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <div class="cards">
-                <picture>
-                    <div class="newCards">
+                <article class="cards">                
+                    <div class="cards_new">
                         <span>Nouveau</span>
                     </div>
-                    <img src="assets/restaurants/a_la_francaise.jpg" alt="À la française">
-                </picture>
-                <div class="cardContent">
-                    <div class="TextCard">
-                        <h3>À la française</h3>
-                        <span>Cité Rouge</span>
+                    <img class="cards_img" src="/assets/restaurants/la_note_enchantee.jpg" alt="La note enchantée">                
+                    <div class="cards_content">
+                        <div class="textCard">
+                            <h3>La note enchantée</h3>
+                            <span>Charonne</span>
+                        </div>
+                        <button class="iconeHeart">
+                            <img src="assets/like/Like.png" alt="icone coeur rempli">
+                        </button>
                     </div>
-                    <div class="iconeHeart">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <div class="cards">
-                <picture>
-                    <div class="newCards">
-                        <span>Nouveau</span>
+                <article class="cards">
+                    <img class="cards_img" src="assets/restaurants/a_la_francaise.jpg" alt="À la française">                
+                    <div class="cards_content">
+                        <div class="textCard">
+                            <h3>À la française</h3>
+                            <span>Cité Rouge</span>
+                        </div>
+                        <button class="iconeHeart">
+                            <img src="assets/like/noLike.png" alt="icone coeur vide">
+                        </button>
                     </div>
-                    <img src="assets/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">
-                </picture>
-                <div class="cardContent">
-                    <div class="TextCard">
-                        <h3>Le délice des sens</h3>
-                        <span>Folie-Méricourt</span>
+                </article>
+
+                <article class="cards">
+                    <img class="cards_img" src="assets/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">                
+                    <div class="cards_content">
+                        <div class="textCard">
+                            <h3>Le délice des sens</h3>
+                            <span>Folie-Méricourt</span>
+                        </div>
+                        <button class="iconeHeart">
+                            <img src="assets/like/noLike.png" alt="icone coeur vide">
+                        </button>
                     </div>
-                    <div class="iconeHeart">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="siteFooter">
         <h2>ohmyfood</h2>
-        <div class="linkFooter">
-            <span><i class="fa-solid fa-utensils"></i>Proposer un restaurant</span>
-            <span><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</span>
-            <span>Mentions légales</span>
-            <span>Contact</span>
+        <div class="siteFooter_container">
+            <span class="siteFooter_container_span"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</span>
+            <span class="siteFooter_container_span"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</span>
+            <span class="siteFooter_container_span">Mentions légales</span>
+            <span class="siteFooter_container_span">Contact</span>
         </div>
     </footer>
 
