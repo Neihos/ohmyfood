@@ -100,6 +100,7 @@ body {
       border: none;
       font-size: 16px;
       font-weight: 500;
+      white-space: nowrap;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       gap: 18px;
       &_number {
@@ -155,60 +156,68 @@ body {
     align-items: center;
     padding-bottom: 80px;
     gap: 20px;
-    .cards {
-      width: 340px;
-      height: 251px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border-radius: 15px;
-      &_img {
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 1);
+      .cards {
         width: 100%;
-        max-height: 70%;
-        object-fit: cover;
-        object-position: bottom;
-      }
-      &_new {
-        width: 80px;
-        height: 29px;
+        overflow: hidden;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background-color: rgba(153, 226, 208, 1);
-        border-radius: 2px;
-        span {
-          color: rgba(0, 135, 102, 1);
+        flex-direction: column;
+        position: relative;
+        border-radius: 15px;
+        &_img {
+          object-fit: cover;
+          height: auto;
+          aspect-ratio: 3.86 / 2;
+          width: 100%;
+          object-position: bottom;
         }
-      }
-      &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-        .textCard {
+        .correction {
+          object-position: center calc(100% + 98px);
+        }
+        &_new {
+          width: 80px;
+          height: 29px;
           display: flex;
-          flex-direction: column;
-          h3 {
-            font-size: 18px;
-            margin: 0px;
-            padding-bottom: 5px;
-          }
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: rgba(153, 226, 208, 1);
+          border-radius: 2px;
           span {
-            font-size: 17px;
-            font-weight: 300;
+            color: rgba(0, 135, 102, 1);
           }
         }
-        .iconeHeart {
-          background-color: transparent;
-          border: none;
-          .fa-heart {
-            font-size: 22px;
+        &_content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          background-color: white;
+          border-radius: 0 0 15px 15px;
+          .textCard {
+            display: flex;
+            flex-direction: column;
+            h3 {
+              font-size: 18px;
+              margin: 0px;
+              padding-bottom: 5px;
+            }
+            span {
+              font-size: 17px;
+              font-weight: 300;
+            }
+          }
+          .iconeHeart {
+            background-color: transparent;
+            border: none;
+            z-index: 2;
+            .fa-heart {
+              font-size: 22px;
+            }
           }
         }
       }
@@ -231,18 +240,39 @@ body {
     flex-direction: column;
     margin-top: 20px;
     gap: 10px;
-    &_span {
+    &_link {
       display: flex;
       gap: 10px;
       font-family: "Roboto";
       font-weight: 500;
       color: white;
+      text-decoration: none;
       font-size: 16px;
+    }
+    &_partners,
+    &_legal {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   }
 }
 
 @media (min-width: 768px) {
+  .siteHeader_logo {
+    width: 200px;
+    height: 34px;
+  }
+  .place {
+    box-shadow: none;
+    margin-bottom: 0px;
+  }
+  .reservation_button {
+    margin-bottom: 0px;
+  }
+  .reservation h2 {
+    font-size: 40px;
+  }
   .functionnement {
     width: 100%;
     display: flex;
@@ -254,7 +284,8 @@ body {
       justify-content: space-between;
       width: 100%;
       max-width: 1080px;
-      margin: 0 5px;
+      margin-left: clamp(0.313rem, -42.888rem + 90vw, 3.125rem);
+      margin-right: clamp(0.313rem, -42.888rem + 90vw, 3.125rem);
       padding: 20px 0;
       gap: 0px;
       &_button {
@@ -268,12 +299,63 @@ body {
       }
     }
     h2 {
-        padding-bottom: 25px;
+      padding-bottom: 25px;
     }
   }
 
-  .cardsSection .cardsContainerGlobal {
-    width: 100%;
-    max-width: 1080px;
+  .cardsSection {
+    .cardsContainerGlobal {
+      width: 100%;
+      max-width: 1080px;
+      margin-left: clamp(0.313rem, -42.888rem + 90vw, 3.125rem);
+      margin-right: clamp(0.313rem, -42.888rem + 90vw, 3.125rem);
+      h2 {
+        padding-top: 10px;
+      }
+    }
+    .cardsContainer {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 40px;
+      gap: clamp(0.625rem, -2.232rem + 5.952vw, 3.125rem);
+      a {
+        width: calc(50% - 20px);
+        max-width: 490px;
+        .cards {
+          height: 251px;
+          &_img {
+            aspect-ratio: 5.5 / 2;
+            object-position: center calc(100% + 49px);
+          }
+          .correction {
+            object-position: center calc(100% + 190px);
+          }
+        }
+      }
+    }
+  }
+
+  .siteFooter {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
+    h2 {
+      margin-right: clamp(0rem, -5.625rem + 11.719vw, 1.875rem);
+    }
+    &_container {
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: clamp(1.25rem, -4.375rem + 11.719vw, 3.125rem);
+      &_partners,
+      &_legal {
+        flex-direction: row;
+        padding-left: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+        padding-right: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+      }
+    }
   }
 }

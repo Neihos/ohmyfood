@@ -62,66 +62,74 @@
             
             <div class="cardsContainerGlobal">
                 <h2>Restaurants</h2>
-                
+
                 <div class="cardsContainer">                
 
-                    <article class="cards">                
-                        <div class="cards_new">
-                            <span>Nouveau</span>
-                        </div>                
-                        <img class="cards_img" src="assets/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">                
-                        <div class="cards_content">
-                            <div class="textCard">
-                                <h3>La palette du goût</h3>
-                                <span>Ménilmontant</span>
+                    <a href="http://">
+                        <article class="cards">                
+                            <div class="cards_new">
+                                <span>Nouveau</span>
+                            </div>                
+                            <img class="cards_img" src="assets/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">                
+                            <div class="cards_content">
+                                <div class="textCard">
+                                    <h3>La palette du goût</h3>
+                                    <span>Ménilmontant</span>
+                                </div>
+                                <button class="iconeHeart">
+                                    <img src="assets/like/noLike.png" alt="icone coeur vide">
+                                </button>
                             </div>
-                            <button class="iconeHeart">
-                                <img src="assets/like/noLike.png" alt="icone coeur vide">
-                            </button>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="cards">                
-                        <div class="cards_new">
-                            <span>Nouveau</span>
-                        </div>
-                        <img class="cards_img" src="/assets/restaurants/la_note_enchantee.jpg" alt="La note enchantée">                
-                        <div class="cards_content">
-                            <div class="textCard">
-                                <h3>La note enchantée</h3>
-                                <span>Charonne</span>
+                    <a href="http://">
+                        <article class="cards">                
+                            <div class="cards_new">
+                                <span>Nouveau</span>
                             </div>
-                            <button class="iconeHeart">
-                                <img src="assets/like/Like.png" alt="icone coeur rempli">
-                            </button>
-                        </div>
-                    </article>
+                            <img class="cards_img correction" src="/assets/restaurants/la_note_enchantee.jpg" alt="La note enchantée">                
+                            <div class="cards_content">
+                                <div class="textCard">
+                                    <h3>La note enchantée</h3>
+                                    <span>Charonne</span>
+                                </div>
+                                <button class="iconeHeart">
+                                    <img src="assets/like/Like.png" alt="icone coeur rempli">
+                                </button>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="cards">
-                        <img class="cards_img" src="assets/restaurants/a_la_francaise.jpg" alt="À la française">                
-                        <div class="cards_content">
-                            <div class="textCard">
-                                <h3>À la française</h3>
-                                <span>Cité Rouge</span>
+                    <a href="http://">
+                        <article class="cards">
+                            <img class="cards_img" src="assets/restaurants/a_la_francaise.jpg" alt="À la française">                
+                            <div class="cards_content">
+                                <div class="textCard">
+                                    <h3>À la française</h3>
+                                    <span>Cité Rouge</span>
+                                </div>
+                                <button class="iconeHeart">
+                                    <img src="assets/like/noLike.png" alt="icone coeur vide">
+                                </button>
                             </div>
-                            <button class="iconeHeart">
-                                <img src="assets/like/noLike.png" alt="icone coeur vide">
-                            </button>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
 
-                    <article class="cards">
-                        <img class="cards_img" src="assets/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">                
-                        <div class="cards_content">
-                            <div class="textCard">
-                                <h3>Le délice des sens</h3>
-                                <span>Folie-Méricourt</span>
+                    <a href="http://">
+                        <article class="cards">
+                            <img class="cards_img" src="assets/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">                
+                            <div class="cards_content">
+                                <div class="textCard">
+                                    <h3>Le délice des sens</h3>
+                                    <span>Folie-Méricourt</span>
+                                </div>
+                                <button class="iconeHeart">
+                                    <img src="assets/like/noLike.png" alt="icone coeur vide">
+                                </button>
                             </div>
-                            <button class="iconeHeart">
-                                <img src="assets/like/noLike.png" alt="icone coeur vide">
-                            </button>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -131,10 +139,14 @@
     <footer class="siteFooter">
         <h2>ohmyfood</h2>
         <div class="siteFooter_container">
-            <span class="siteFooter_container_span"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</span>
-            <span class="siteFooter_container_span"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</span>
-            <span class="siteFooter_container_span">Mentions légales</span>
-            <span class="siteFooter_container_span">Contact</span>
+            <div class="siteFooter_container_partners">
+                <a href="http://" class="siteFooter_container_link"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+                <a href="http://" class="siteFooter_container_link"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+            </div>
+            <div class="siteFooter_container_legal">
+                <a href="http://" class="siteFooter_container_link">Mentions légales</a>
+                <a href="http://" class="siteFooter_container_link">Contact</a>
+            </div>
         </div>
     </footer>
 
