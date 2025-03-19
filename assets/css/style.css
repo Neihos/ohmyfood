@@ -52,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100%;
   background-color: rgb(246, 246, 246);
   padding-bottom: 40px;
 }
@@ -80,11 +81,6 @@ body {
 
 .functionnement {
   padding-top: 40px;
-}
-.functionnement h2 {
-  font-size: 24px;
-  font-weight: 700;
-  padding-bottom: 10px;
 }
 .functionnement_container {
   width: 335px;
@@ -129,16 +125,29 @@ body {
 .functionnement_container_button .fa-list-ul {
   color: rgb(126, 126, 126);
 }
+.functionnement_container h2 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  margin: 0px;
+}
 
 .cardsSection {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   background-color: var(--background-secondaire);
 }
-.cardsSection h2 {
-  margin-left: 20px;
+.cardsSection .cardsContainerGlobal {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+}
+.cardsSection .cardsContainerGlobal h2 {
   padding-top: 40px;
+  text-align: start;
+  font-weight: 700;
 }
 .cardsSection .cardsContainer {
   display: flex;
@@ -232,4 +241,39 @@ body {
   font-weight: 500;
   color: white;
   font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .functionnement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  .functionnement_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 5px;
+    padding: 20px 0;
+    gap: 0px;
+  }
+  .functionnement_container_button {
+    width: 30%;
+    max-width: 323px;
+    margin: 0;
+    margin-left: 12px;
+    padding-left: clamp(1.25rem, -0.179rem + 2.976vw, 2.5rem);
+    max-width: 323px;
+    gap: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
+  }
+  .functionnement h2 {
+    padding-bottom: 25px;
+  }
+  .cardsSection .cardsContainerGlobal {
+    width: 100%;
+    max-width: 1080px;
+  }
 }/*# sourceMappingURL=style.css.map */
