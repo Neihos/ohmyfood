@@ -1,13 +1,3 @@
-:root {
-  --font-principal: "Roboto", Arial, Helvetica, sans-serif;
-  --background-secondaire: #eaeaea;
-  --button-color: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
-}
-
-body {
-  font-family: var(--font-principal);
-}
-
 .siteHeader {
   width: 100%;
   height: 63px;
@@ -18,6 +8,76 @@ body {
 .siteHeader_logo {
   width: 162px;
   height: 30px;
+}
+
+@media (min-width: 768px) {
+  .siteHeader_logo {
+    width: 200px;
+    height: 34px;
+  }
+}
+.siteFooter {
+  background-color: rgb(53, 53, 53);
+  padding: 30px;
+}
+.siteFooter h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+}
+.siteFooter_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+.siteFooter_container_link {
+  display: flex;
+  gap: 10px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.siteFooter_container_partners, .siteFooter_container_legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .siteFooter {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
+  }
+  .siteFooter h2 {
+    margin-right: clamp(0rem, -5.625rem + 11.719vw, 1.875rem);
+  }
+  .siteFooter_container {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: clamp(1.25rem, -4.375rem + 11.719vw, 3.125rem);
+  }
+  .siteFooter_container_partners, .siteFooter_container_legal {
+    flex-direction: row;
+    padding-left: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+    padding-right: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+  }
+}
+:root {
+  --font-principal: "Roboto", Arial, Helvetica, sans-serif;
+  --background-secondaire: #eaeaea;
+  --button-color: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+body {
+  font-family: var(--font-principal);
 }
 
 .main-container {
@@ -222,54 +282,39 @@ body {
   background-color: transparent;
   border: none;
   z-index: 2;
+  position: relative;
+  width: 22px;
+  height: 21px;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart .fa-heart {
-  font-size: 22px;
+.cardsSection .cardsContainer a .cards_content .iconeHeart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-
-.siteFooter {
-  background-color: rgb(53, 53, 53);
-  padding: 30px;
+.cardsSection .cardsContainer a .cards_content .iconeHeart .visible {
+  opacity: 1;
 }
-.siteFooter h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0px;
-  color: rgb(255, 255, 255);
+.cardsSection .cardsContainer a .cards_content .iconeHeart .hidden {
+  opacity: 0;
 }
-.siteFooter_container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  gap: 10px;
+.cardsSection .cardsContainer a .cards_content .iconeHeart:hover .visible {
+  opacity: 0;
 }
-.siteFooter_container_link {
-  display: flex;
-  gap: 10px;
-  font-family: "Roboto";
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-.siteFooter_container_partners, .siteFooter_container_legal {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.cardsSection .cardsContainer a .cards_content .iconeHeart:hover .hidden {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
-  .siteHeader_logo {
-    width: 200px;
-    height: 34px;
-  }
   .place {
     box-shadow: none;
     margin-bottom: 0px;
   }
   .reservation_button {
     margin-bottom: 0px;
+    cursor: pointer;
   }
   .reservation h2 {
     font-size: 40px;
@@ -299,6 +344,7 @@ body {
     padding-left: clamp(1.25rem, -0.179rem + 2.976vw, 2.5rem);
     max-width: 323px;
     gap: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
+    cursor: pointer;
   }
   .functionnement h2 {
     padding-bottom: 25px;
@@ -335,25 +381,5 @@ body {
   .cardsSection .cardsContainer a .cards .correction {
     -o-object-position: center calc(100% + 190px);
        object-position: center calc(100% + 190px);
-  }
-  .siteFooter {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row-reverse;
-    padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
-  }
-  .siteFooter h2 {
-    margin-right: clamp(0rem, -5.625rem + 11.719vw, 1.875rem);
-  }
-  .siteFooter_container {
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    margin-right: clamp(1.25rem, -4.375rem + 11.719vw, 3.125rem);
-  }
-  .siteFooter_container_partners, .siteFooter_container_legal {
-    flex-direction: row;
-    padding-left: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
-    padding-right: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
   }
 }/*# sourceMappingURL=style.css.map */

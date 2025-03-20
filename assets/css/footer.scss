@@ -1,0 +1,56 @@
+.siteFooter {
+  background-color: rgba(53, 53, 53, 1);
+  padding: 30px;
+  h2 {
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+    color: rgb(255, 255, 255, 1);
+  }
+  &_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    &_link {
+      display: flex;
+      gap: 10px;
+      font-family: "Roboto";
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    &_partners,
+    &_legal {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .siteFooter {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
+    h2 {
+      margin-right: clamp(0rem, -5.625rem + 11.719vw, 1.875rem);
+    }
+    &_container {
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: clamp(1.25rem, -4.375rem + 11.719vw, 3.125rem);
+      &_partners,
+      &_legal {
+        flex-direction: row;
+        padding-left: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+        padding-right: clamp(0rem, -3.75rem + 7.813vw, 1.25rem);
+      }
+    }
+  }
+}
