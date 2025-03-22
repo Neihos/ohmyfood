@@ -461,7 +461,7 @@
   height: 21px;
   padding-right: 40px;
 }
-.presentationRestaurant .restaurantIconeHeart svg {
+.presentationRestaurant .restaurantIconeHeart img {
   position: absolute;
   top: -6px;
   left: 0;
@@ -549,6 +549,9 @@
 }
 .restaurantMenu .dish:nth-child(12) {
   animation-delay: 3.6s;
+}
+.restaurantMenu .dish:nth-child(13) {
+  animation-delay: 3.9s;
 }
 .restaurantMenu .dish_h3 {
   margin: 0 0 4px 0;
