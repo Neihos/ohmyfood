@@ -2,20 +2,21 @@
 //                                                  SCSS Keyframes, Mixin, etc...
 // =================================================================================================================
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(59px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+@mixin list-delay {
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.3}s;
+        }
+    }
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(59px);
-  }
+@keyframes menu-list {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }
