@@ -136,10 +136,6 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.5s;
 }
-.reservation_button:hover {
-  background: var(--button-color-hover);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
-}
 
 .functionnement {
   padding-top: 40px;
@@ -179,11 +175,9 @@
   color: white;
   font-size: 14px;
   border-radius: 12px;
-  background-color: rgb(147, 86, 220);
+  background-color: var(--primary-color);
 }
-.functionnement_container_button .fa-store {
-  color: rgb(147, 86, 220);
-}
+.functionnement_container_button .fa-store,
 .functionnement_container_button .fa-mobile-screen-button,
 .functionnement_container_button .fa-list-ul {
   color: rgb(126, 126, 126);
@@ -302,12 +296,6 @@
 .cardsSection .cardsContainer a .cards_content .iconeHeart .hidden {
   opacity: 0;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart:hover .visible {
-  opacity: 0;
-}
-.cardsSection .cardsContainer a .cards_content .iconeHeart:hover .hidden {
-  opacity: 1;
-}
 
 @media (min-width: 768px) {
   .place {
@@ -317,6 +305,10 @@
   .reservation_button {
     margin-bottom: 0px;
     cursor: pointer;
+  }
+  .reservation_button:hover {
+    background: var(--button-color-hover);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
   }
   .reservation h2 {
     font-size: 40px;
@@ -347,6 +339,11 @@
     max-width: 323px;
     gap: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
     cursor: pointer;
+  }
+  .functionnement_container_button:hover .fa-store,
+  .functionnement_container_button:hover .fa-mobile-screen-button,
+  .functionnement_container_button:hover .fa-list-ul {
+    color: rgb(147, 86, 220);
   }
   .functionnement h2 {
     padding-bottom: 25px;
@@ -383,6 +380,12 @@
   .cardsSection .cardsContainer a .cards .correction {
     -o-object-position: center calc(100% + 190px);
        object-position: center calc(100% + 190px);
+  }
+  .cardsSection .cardsContainer a .cards_content .iconeHeart:hover .visible {
+    opacity: 0;
+  }
+  .cardsSection .cardsContainer a .cards_content .iconeHeart:hover .hidden {
+    opacity: 1;
   }
 }
 @keyframes menu-list {
@@ -472,12 +475,6 @@
 }
 .presentationRestaurant .restaurantIconeHeart .hidden {
   opacity: 0;
-}
-.presentationRestaurant .restaurantIconeHeart:hover .visible {
-  opacity: 0;
-}
-.presentationRestaurant .restaurantIconeHeart:hover .hidden {
-  opacity: 1;
 }
 
 .restaurantMenu {
@@ -592,18 +589,6 @@
   transform: rotate(90deg);
   transition: 0.4s 0.2s ease-in-out;
 }
-.restaurantMenu .dish:hover {
-  cursor: pointer;
-}
-.restaurantMenu .dish:hover .price {
-  margin-right: 60px;
-}
-.restaurantMenu .dish:hover .check {
-  transform: translateX(0);
-}
-.restaurantMenu .dish:hover .check i {
-  transform: rotate(0deg);
-}
 .restaurantMenu .order_button {
   width: 218px;
   height: 50px;
@@ -615,10 +600,6 @@
   color: rgb(255, 255, 255);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.5s;
-}
-.restaurantMenu .order_button:hover {
-  background: var(--button-color-hover);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
 }
 
 @media (min-width: 768px) {
@@ -638,16 +619,43 @@
   .presentationRestaurant .restaurantIconeHeart {
     padding-right: 0;
   }
+  .presentationRestaurant .restaurantIconeHeart:hover .visible {
+    opacity: 0;
+  }
+  .presentationRestaurant .restaurantIconeHeart:hover .hidden {
+    opacity: 1;
+  }
   .restaurantMenu {
     max-width: 1055px;
     align-items: center;
   }
-  .restaurantMenu_h2, .restaurantMenu .dish {
+  .restaurantMenu_h2,
+  .restaurantMenu .dish {
     width: 100%;
     max-width: 634px;
   }
+  .restaurantMenu_h2:hover,
+  .restaurantMenu .dish:hover {
+    cursor: pointer;
+  }
+  .restaurantMenu_h2:hover .price,
+  .restaurantMenu .dish:hover .price {
+    margin-right: 60px;
+  }
+  .restaurantMenu_h2:hover .check,
+  .restaurantMenu .dish:hover .check {
+    transform: translateX(0);
+  }
+  .restaurantMenu_h2:hover .check i,
+  .restaurantMenu .dish:hover .check i {
+    transform: rotate(0deg);
+  }
   .restaurantMenu_h2 {
     transform: translateX(-19px);
+  }
+  .order_button:hover {
+    background: var(--button-color-hover);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
   }
 }
 @keyframes menu-list {
@@ -713,7 +721,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader 0.2s 1s ease-out forwards;
+  animation: loader 0.2s 2s ease-out forwards;
 }
 .loader .spinner {
   flex-direction: row;
@@ -748,6 +756,7 @@
   --font-principal: "Roboto", Arial, Helvetica, sans-serif;
   --font-secondaire: "Shrikhand", Arial, Helvetica, sans-serif;
   --background-secondaire: #eaeaea;
+  --primary-color: rgba(147, 86, 220, 1);
   --button-color: linear-gradient(
     to bottom,
     rgba(255, 121, 218, 1),

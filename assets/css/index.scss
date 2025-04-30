@@ -66,10 +66,6 @@
     color: rgb(255, 255, 255, 1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.5s;
-    &:hover {
-      background: var(--button-color-hover);
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
-    }
   }
 }
 
@@ -110,11 +106,9 @@
         color: white;
         font-size: 14px;
         border-radius: 12px;
-        background-color: rgba(147, 86, 220, 1);
+        background-color: var(--primary-color);
       }
-      .fa-store {
-        color: rgba(147, 86, 220, 1);
-      }
+      .fa-store,
       .fa-mobile-screen-button,
       .fa-list-ul {
         color: rgba(126, 126, 126, 1);
@@ -229,12 +223,6 @@
             .hidden {
               opacity: 0;
             }
-            &:hover .visible {
-              opacity: 0;
-            }
-            &:hover .hidden {
-              opacity: 1;
-            }
           }
         }
       }
@@ -245,7 +233,6 @@
 //-----> medias queries <-----
 
 @media (min-width: 768px) {
-
   //-----> location <-----
   .place {
     box-shadow: none;
@@ -257,6 +244,10 @@
   .reservation_button {
     margin-bottom: 0px;
     cursor: pointer;
+    &:hover {
+      background: var(--button-color-hover);
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
+    }
   }
   .reservation h2 {
     font-size: 40px;
@@ -288,6 +279,13 @@
         max-width: 323px;
         gap: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
         cursor: pointer;
+        &:hover {
+          .fa-store,
+          .fa-mobile-screen-button,
+          .fa-list-ul {
+            color: var(--primary-color);
+          }
+        }
       }
     }
     h2 {
@@ -325,6 +323,14 @@
           }
           .correction {
             object-position: center calc(100% + 190px);
+          }
+          &_content .iconeHeart {
+            &:hover .visible {
+              opacity: 0;
+            }
+            &:hover .hidden {
+              opacity: 1;
+            }
           }
         }
       }
