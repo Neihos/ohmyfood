@@ -18,9 +18,15 @@
 }
 
 @media (min-width: 768px) {
+  .siteHeader {
+    height: 96px;
+  }
   .siteHeader_logo {
     width: 200px;
     height: 34px;
+  }
+  .siteHeader_svg {
+    top: 40px;
   }
 }
 .siteFooter {
@@ -58,6 +64,7 @@
 @media (min-width: 768px) {
   .siteFooter {
     display: flex;
+    height: 54px;
     align-items: flex-end;
     flex-direction: row-reverse;
     padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
@@ -82,6 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .place {
@@ -302,8 +310,12 @@
     box-shadow: none;
     margin-bottom: 0px;
   }
+  .reservation {
+    padding: 30px;
+    gap: 14px;
+  }
   .reservation_button {
-    margin-bottom: 0px;
+    margin: 0px auto;
     cursor: pointer;
   }
   .reservation_button:hover {
@@ -312,12 +324,13 @@
   }
   .reservation h2 {
     font-size: 40px;
+    padding: 0;
   }
   .functionnement {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .functionnement_container {
     flex-direction: row;
@@ -343,7 +356,7 @@
   .functionnement_container_button:hover .fa-store,
   .functionnement_container_button:hover .fa-mobile-screen-button,
   .functionnement_container_button:hover .fa-list-ul {
-    color: rgb(147, 86, 220);
+    color: var(--primary-color);
   }
   .functionnement h2 {
     padding-bottom: 25px;

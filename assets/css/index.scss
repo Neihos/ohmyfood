@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 //-----> localisation <-----
@@ -241,16 +242,21 @@
 
   //-----> search restaurant <-----
 
-  .reservation_button {
-    margin-bottom: 0px;
-    cursor: pointer;
-    &:hover {
-      background: var(--button-color-hover);
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
+  .reservation {
+    padding: 30px;
+    gap: 14px;
+    &_button {
+      margin: 0px auto;
+      cursor: pointer;
+      &:hover {
+        background: var(--button-color-hover);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);
+      }
     }
   }
   .reservation h2 {
     font-size: 40px;
+    padding: 0;
   }
 
   //-----> menu fonctionnement <-----
@@ -259,7 +265,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 30px 0;
     &_container {
       flex-direction: row;
       flex-wrap: wrap;

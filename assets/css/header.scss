@@ -22,8 +22,14 @@
 }
 
 @media (min-width: 768px) {
-  .siteHeader_logo {
-    width: 200px;
-    height: 34px;
+  .siteHeader {
+    height: 96px;
+    &_logo {
+      width: 200px;
+      height: 34px;
+    }
+    &_svg  {
+      top: 40px;
+    } 
   }
 }

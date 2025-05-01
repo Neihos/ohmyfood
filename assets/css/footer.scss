@@ -38,6 +38,7 @@
 @media (min-width: 768px) {
   .siteFooter {
     display: flex;
+    height: 54px;
     align-items: flex-end;
     flex-direction: row-reverse;
     padding-left: clamp(1.875rem, -10.512rem + 25.806vw, 4.375rem);
