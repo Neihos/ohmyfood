@@ -33,7 +33,10 @@
   background-color: rgb(53, 53, 53);
   padding: 30px;
 }
-.siteFooter h2 {
+.siteFooter a {
+  text-decoration: none;
+}
+.siteFooter a h2 {
   font-family: var(--font-secondaire);
   font-weight: 400;
   font-size: 18px;
@@ -224,11 +227,7 @@
   padding-bottom: 80px;
   gap: 20px;
 }
-.cardsSection .cardsContainer a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-.cardsSection .cardsContainer a .cards {
+.cardsSection .cardsContainer .cards {
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -236,7 +235,12 @@
   position: relative;
   border-radius: 15px;
 }
-.cardsSection .cardsContainer a .cards_img {
+.cardsSection .cardsContainer .cards a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.cardsSection .cardsContainer .cards_img {
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
@@ -245,11 +249,11 @@
   -o-object-position: bottom;
      object-position: bottom;
 }
-.cardsSection .cardsContainer a .cards .correction {
+.cardsSection .cardsContainer .cards .correction {
   -o-object-position: center calc(100% + 98px);
      object-position: center calc(100% + 98px);
 }
-.cardsSection .cardsContainer a .cards_new {
+.cardsSection .cardsContainer .cards_new {
   width: 80px;
   height: 29px;
   display: flex;
@@ -261,10 +265,10 @@
   background-color: rgb(153, 226, 208);
   border-radius: 2px;
 }
-.cardsSection .cardsContainer a .cards_new span {
+.cardsSection .cardsContainer .cards_new span {
   color: rgb(0, 135, 102);
 }
-.cardsSection .cardsContainer a .cards_content {
+.cardsSection .cardsContainer .cards_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -272,39 +276,52 @@
   background-color: white;
   border-radius: 0 0 15px 15px;
 }
-.cardsSection .cardsContainer a .cards_content .textCard {
+.cardsSection .cardsContainer .cards_content .textCard {
   display: flex;
   flex-direction: column;
 }
-.cardsSection .cardsContainer a .cards_content .textCard h3 {
+.cardsSection .cardsContainer .cards_content .textCard h3 {
   font-size: 18px;
   margin: 0px;
   padding-bottom: 5px;
 }
-.cardsSection .cardsContainer a .cards_content .textCard span {
+.cardsSection .cardsContainer .cards_content .textCard span {
   font-size: 17px;
   font-weight: 300;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart {
-  background-color: transparent;
-  border: none;
-  z-index: 2;
-  position: relative;
+.cardsSection .cardsContainer .cards .iconeHeart {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
   width: 22px;
   height: 21px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart img {
+.cardsSection .cardsContainer .cards .iconeHeart .toggleHeart {
+  display: none;
+}
+.cardsSection .cardsContainer .cards .iconeHeart .heart-full,
+.cardsSection .cardsContainer .cards .iconeHeart .heart-empty {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: auto;
   transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart .visible {
+.cardsSection .cardsContainer .cards .iconeHeart .heart-full {
+  opacity: 0;
+}
+.cardsSection .cardsContainer .cards .iconeHeart .heart-empty {
   opacity: 1;
 }
-.cardsSection .cardsContainer a .cards_content .iconeHeart .hidden {
+.cardsSection .cardsContainer .cards .iconeHeart .toggleHeart:checked ~ .heart-full {
+  opacity: 1;
+}
+.cardsSection .cardsContainer .cards .iconeHeart .toggleHeart:checked ~ .heart-empty {
   opacity: 0;
 }
 
@@ -381,26 +398,24 @@
     padding-bottom: 40px;
     gap: clamp(0.625rem, -2.232rem + 5.952vw, 3.125rem);
   }
-  .cardsSection .cardsContainer a {
+  .cardsSection .cardsContainer .cards {
     width: calc(50% - 20px);
     max-width: 490px;
-  }
-  .cardsSection .cardsContainer a .cards {
     height: 251px;
   }
-  .cardsSection .cardsContainer a .cards_img {
+  .cardsSection .cardsContainer .cards_img {
     aspect-ratio: 5.5/2;
     -o-object-position: center calc(100% + 49px);
        object-position: center calc(100% + 49px);
   }
-  .cardsSection .cardsContainer a .cards .correction {
+  .cardsSection .cardsContainer .cards .correction {
     -o-object-position: center calc(100% + 190px);
        object-position: center calc(100% + 190px);
   }
-  .cardsSection .cardsContainer a .cards_content .iconeHeart:hover .visible {
+  .cardsSection .cardsContainer .cards .iconeHeart:hover .visible {
     opacity: 0;
   }
-  .cardsSection .cardsContainer a .cards_content .iconeHeart:hover .hidden {
+  .cardsSection .cardsContainer .cards .iconeHeart:hover .hidden {
     opacity: 1;
   }
 }
