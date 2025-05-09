@@ -55,6 +55,26 @@
     width: 22px;
     height: 21px;
     padding-right: 40px;
+    .toggleHeart {
+      display: none;
+    }
+    .heart-full,
+    .heart-empty {
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+    }
+    .heart-full {
+      opacity: 0;
+    }
+    .heart-empty {
+      opacity: 1;
+    }
+    .toggleHeart:checked ~ .heart-full {
+      opacity: 1;
+    }
+    .toggleHeart:checked ~ .heart-empty {
+      opacity: 0;
+    }
     img {
       position: absolute;
       top: -6px;
@@ -180,7 +200,7 @@
       padding-top: 50px;
     }
     .restaurantIconeHeart {
-      padding-right: 0;
+      padding-right: 0px;
       &:hover .visible {
         opacity: 0;
       }
@@ -217,7 +237,6 @@
     }
   }
 
-  
   .order_button:hover {
     background: var(--button-color-hover);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.45);

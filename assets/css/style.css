@@ -495,6 +495,26 @@
   height: 21px;
   padding-right: 40px;
 }
+.presentationRestaurant .restaurantIconeHeart .toggleHeart {
+  display: none;
+}
+.presentationRestaurant .restaurantIconeHeart .heart-full,
+.presentationRestaurant .restaurantIconeHeart .heart-empty {
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.presentationRestaurant .restaurantIconeHeart .heart-full {
+  opacity: 0;
+}
+.presentationRestaurant .restaurantIconeHeart .heart-empty {
+  opacity: 1;
+}
+.presentationRestaurant .restaurantIconeHeart .toggleHeart:checked ~ .heart-full {
+  opacity: 1;
+}
+.presentationRestaurant .restaurantIconeHeart .toggleHeart:checked ~ .heart-empty {
+  opacity: 0;
+}
 .presentationRestaurant .restaurantIconeHeart img {
   position: absolute;
   top: -6px;
@@ -648,7 +668,7 @@
     padding-top: 50px;
   }
   .presentationRestaurant .restaurantIconeHeart {
-    padding-right: 0;
+    padding-right: 0px;
   }
   .presentationRestaurant .restaurantIconeHeart:hover .visible {
     opacity: 0;
